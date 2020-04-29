@@ -454,151 +454,151 @@ print(subjectsDone)
 print(p1_c_done)
 print(p1_c_count)
 print(doubleJump)
-#    elif(periodCount==5):
-#        #period 6
-#        subjectToday=np.array(cToday.tolist()+sToday.tolist()+hToday.tolist()+tToday.tolist())
-#        for i in subjectsDone:
-#            subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
-#        if(p1_c_count==2):
-#            for i in p1_c_done:
-#                subjectTpick=np.delete(p1_c,np.where(p1_c==i),axis=0)
-#                
-#            for i in p1_c:
-#                subjectTpick=i
-#            while(True):
-#                if(subjectTpick in LessonsDouble):
-#                    doubleJump.append(subjectTpick)
-#                    subjectsDone.append(subjectTpick)
-#                    subjectTpick=np.random.choice(subjectToday,1)
-#                    for i in subjectTpick:
-#                        subjectTpick=i
-#                else:
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+1
-#                    if(subjectTpick in p1_c):
-#                        p1_c_count=p1_c_count+1
-#                        p1_c_done.append(subjectTpick)
-#                    break
-#        else:
-#            if(len(doubleJump)>0):
-#                subjectTpick=doubleJump.pop(0)
-#                timetable[periodCount][dayCount]=subjectTpick
-#                timetable[periodCount+1][dayCount]=subjectTpick
-#                periodCount=periodCount+2
-#            else:
-#                subjectToday=np.array(cToday.tolist()+sToday.tolist()+hToday.tolist()+tToday.tolist())
-#                for i in subjectsDone:
-#                    subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
-#                
-#                subjectTpick=np.random.choice(subjectToday,1)
-#                for i in subjectTpick:
-#                    subjectTpick=i
-#                
-#                if(subjectTpick in LessonsDouble):
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    timetable[periodCount+1][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+2
-#                else:
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+1
-#    elif(periodCount==6):
-#        #period 7
-#        subjectToday=np.array(hToday.tolist()+tToday.tolist())
-#        for i in subjectsDone:
-#            subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
-#            
-#        subjectTpick=np.random.choice(subjectToday,1)
-#        for i in subjectTpick:
-#            subjectTpick=i
-#            
-#        while(True):
-#            if(subjectTpick in LessonsDouble):
-#                doubleJump.append(subjectTpick)
-#                subjectsDone.append(subjectTpick)
-#                subjectTpick=np.random.choice(subjectToday,1)
-#            else:
-#                timetable[periodCount][dayCount]=subjectTpick
-#                subjectsDone.append(subjectTpick)
-#                periodCount=periodCount+1
-#                break
-#    elif(periodCount==7):
-#        #period 8
-#        if(len(doubleJump)>0):
-#            subjectTpick=doubleJump.pop(0)
-#            timetable[periodCount][dayCount]=subjectTpick
-#            timetable[periodCount+1][dayCount]=subjectTpick
-#            periodCount=periodCount+2
-#        else:
-#            subjectToday=np.array(hToday.tolist()+tToday.tolist())
-#            for i in subjectsDone:
-#                subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
-#            if(subjectToday.size !=0):
-#                subjectTpick=np.random.choice(subjectToday,1)
-#                for i in subjectTpick:
-#                    subjectTpick=i
-#                
-#                if(subjectTpick in LessonsDouble):
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    timetable[periodCount+1][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+2
-#                else:
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+1
-#            else:
-#               periodCount=periodCount+1 
-#    elif(periodCount==8):
-#        #period 9
-#        if(len(doubleJump)>0):
-#            subjectTpick=doubleJump.pop(0)
-#            timetable[periodCount][dayCount]=subjectTpick
-#            timetable[periodCount+1][dayCount]=subjectTpick
-#            periodCount=periodCount+2
-#        else:
-#            subjectToday=np.array(hToday.tolist()+tToday.tolist())
-#            for i in subjectsDone:
-#                subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
-#            if(subjectToday.size !=0):
-#                subjectTpick=np.random.choice(subjectToday,1)
-#                for i in subjectTpick:
-#                    subjectTpick=i
-#                
-#                if(subjectTpick in LessonsDouble):
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    timetable[periodCount+1][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+2
-#                else:
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+1
-#            else:
-#                periodCount=periodCount+2
-#    elif(periodCount==9):
-#        #period 10
-#        subjectToday=np.array(hToday.tolist()+tToday.tolist())
-#        for i in subjectsDone:
-#            subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
-#        if(subjectToday.size !=0):    
-#            subjectTpick=np.random.choice(subjectToday,1)
-#            for i in subjectTpick:
-#                subjectTpick=i
-#            while(True):
-#                if(subjectTpick in LessonsDouble):
-#                    doubleJump.append(subjectTpick)
-#                    subjectsDone.append(subjectTpick)
-#                    subjectTpick=np.random.choice(subjectToday,1)
-#                    for i in subjectTpick:
-#                        subjectTpick=i
-#                else:
-#                    timetable[periodCount][dayCount]=subjectTpick
-#                    subjectsDone.append(subjectTpick)
-#                    periodCount=periodCount+1
-#                    break
-#        else:
-#            periodCount=periodCount+1
-#print(timetable)      
+   elif(periodCount==5):
+        #period 6
+        subjectToday=np.array(cToday.tolist()+sToday.tolist()+hToday.tolist()+tToday.tolist())
+        for i in subjectsDone:
+            subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
+        if(p1_c_count==2):
+            for i in p1_c_done:
+                subjectTpick=np.delete(p1_c,np.where(p1_c==i),axis=0)
+                
+            for i in p1_c:
+                subjectTpick=i
+            while(True):
+                if(subjectTpick in LessonsDouble):
+                    doubleJump.append(subjectTpick)
+                    subjectsDone.append(subjectTpick)
+                    subjectTpick=np.random.choice(subjectToday,1)
+                    for i in subjectTpick:
+                        subjectTpick=i
+                else:
+                    timetable[periodCount][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+1
+                    if(subjectTpick in p1_c):
+                        p1_c_count=p1_c_count+1
+                        p1_c_done.append(subjectTpick)
+                    break
+        else:
+            if(len(doubleJump)>0):
+                subjectTpick=doubleJump.pop(0)
+                timetable[periodCount][dayCount]=subjectTpick
+                timetable[periodCount+1][dayCount]=subjectTpick
+                periodCount=periodCount+2
+            else:
+                subjectToday=np.array(cToday.tolist()+sToday.tolist()+hToday.tolist()+tToday.tolist())
+                for i in subjectsDone:
+                    subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
+                
+                subjectTpick=np.random.choice(subjectToday,1)
+                for i in subjectTpick:
+                    subjectTpick=i
+                
+                if(subjectTpick in LessonsDouble):
+                    timetable[periodCount][dayCount]=subjectTpick
+                    timetable[periodCount+1][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+2
+                else:
+                    timetable[periodCount][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+1
+    elif(periodCount==6):
+        #period 7
+        subjectToday=np.array(hToday.tolist()+tToday.tolist())
+        for i in subjectsDone:
+            subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
+            
+        subjectTpick=np.random.choice(subjectToday,1)
+        for i in subjectTpick:
+            subjectTpick=i
+            
+        while(True):
+            if(subjectTpick in LessonsDouble):
+                doubleJump.append(subjectTpick)
+                subjectsDone.append(subjectTpick)
+                subjectTpick=np.random.choice(subjectToday,1)
+            else:
+                timetable[periodCount][dayCount]=subjectTpick
+                subjectsDone.append(subjectTpick)
+                periodCount=periodCount+1
+                break
+    elif(periodCount==7):
+        #period 8
+        if(len(doubleJump)>0):
+            subjectTpick=doubleJump.pop(0)
+            timetable[periodCount][dayCount]=subjectTpick
+            timetable[periodCount+1][dayCount]=subjectTpick
+            periodCount=periodCount+2
+        else:
+            subjectToday=np.array(hToday.tolist()+tToday.tolist())
+            for i in subjectsDone:
+                subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
+            if(subjectToday.size !=0):
+                subjectTpick=np.random.choice(subjectToday,1)
+                for i in subjectTpick:
+                    subjectTpick=i
+                
+                if(subjectTpick in LessonsDouble):
+                    timetable[periodCount][dayCount]=subjectTpick
+                    timetable[periodCount+1][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+2
+                else:
+                    timetable[periodCount][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+1
+            else:
+               periodCount=periodCount+1 
+    elif(periodCount==8):
+        #period 9
+        if(len(doubleJump)>0):
+            subjectTpick=doubleJump.pop(0)
+            timetable[periodCount][dayCount]=subjectTpick
+            timetable[periodCount+1][dayCount]=subjectTpick
+            periodCount=periodCount+2
+        else:
+            subjectToday=np.array(hToday.tolist()+tToday.tolist())
+            for i in subjectsDone:
+                subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
+            if(subjectToday.size !=0):
+                subjectTpick=np.random.choice(subjectToday,1)
+                for i in subjectTpick:
+                    subjectTpick=i
+                
+                if(subjectTpick in LessonsDouble):
+                    timetable[periodCount][dayCount]=subjectTpick
+                    timetable[periodCount+1][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+2
+                else:
+                    timetable[periodCount][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+1
+            else:
+                periodCount=periodCount+2
+    elif(periodCount==9):
+        #period 10
+        subjectToday=np.array(hToday.tolist()+tToday.tolist())
+        for i in subjectsDone:
+            subjectToday=np.delete(subjectToday, np.where(subjectToday==i), axis=0)
+        if(subjectToday.size !=0):    
+            subjectTpick=np.random.choice(subjectToday,1)
+            for i in subjectTpick:
+                subjectTpick=i
+            while(True):
+                if(subjectTpick in LessonsDouble):
+                    doubleJump.append(subjectTpick)
+                    subjectsDone.append(subjectTpick)
+                    subjectTpick=np.random.choice(subjectToday,1)
+                    for i in subjectTpick:
+                        subjectTpick=i
+                else:
+                    timetable[periodCount][dayCount]=subjectTpick
+                    subjectsDone.append(subjectTpick)
+                    periodCount=periodCount+1
+                    break
+        else:
+            periodCount=periodCount+1
+print(timetable)      
